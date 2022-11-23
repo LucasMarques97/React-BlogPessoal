@@ -1,0 +1,12 @@
+.titulo{
+    text-align: center;
+    color: blue;
+}
+img{
+    width: 500px;
+    height: 400px;
+}
+.container{
+    justify-content: center;
+    display: flex;
+}
