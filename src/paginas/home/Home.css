@@ -10,3 +10,6 @@ img{
     justify-content: center;
     display: flex;
 }
+Button {
+    margin-right: '5px';
+}
