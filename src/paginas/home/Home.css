@@ -1,15 +1,18 @@
+.caixa{
+    background-color: #3F51B5;
+}
+
 .titulo{
-    text-align: center;
-    color: blue;
+   color: white !important; /* !important - é para forçar a fazer mesmo que não queira. Por como prioridade */
+   font-weight: bold !important;
 }
-img{
-    width: 500px;
-    height: 400px;
+
+.botao{
+    border-color: white !important;
+    background-color: #3F51B5;
+    color: white !important;
 }
-.container{
-    justify-content: center;
-    display: flex;
-}
-Button {
-    margin-right: '5px';
+
+.postagens{
+    background-color: white;
 }
