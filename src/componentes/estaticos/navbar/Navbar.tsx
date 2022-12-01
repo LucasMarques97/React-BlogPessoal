@@ -6,15 +6,15 @@ import './Navbar.css'
 function Navbar() {
     return (
         <>
-            <AppBar position="static">
-                <Toolbar variant="dense">
+            <AppBar position="static" className='barPrincipal'>
+                <Toolbar variant="dense" className='barFlex'>
                     <Box className='cursor'>
                         <Typography variant="h5" color="inherit">
                             BlogPessoal
                         </Typography>
                     </Box>
 
-                    <Box display="flex" justifyContent="start">
+                    <Box display="flex" justifyContent='start'>
 
                         <Link to='/home' className='text-decorator-none'>
                         <Box mx={1} className='cursor'>

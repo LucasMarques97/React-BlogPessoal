@@ -49,14 +49,15 @@ function updateModel(e: ChangeEvent<HTMLInputElement>){
     })
 }
 
-useEffect(()=>{
+useEffect(()=>{ /* serve para confirmar se os dados digitados estão corretos e retornar-los */
     if(token != ''){
         navigate('/home')
     }
 }, [token])
 
 async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
-    e.preventDefault()
+    e.preventDefault() /* e.preventDefault(), serve para não carregar a pagina. 
+    Ex: quando vc está na pagina de cadastro e preenche todo o formulario mas quando vc envia o email está incorreto, consequentemente a pagina carrega e vc perde todos os dados */
 
     try{
 
@@ -79,8 +80,9 @@ async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
                         <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos1'>Entrar</Typography>
 
                         <TextField value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} id='usuario' label='usuário' variant='outlined' name='usuario' margin='normal' fullWidth />
-                        {/* value={UserLogin.usuario} vai estar linkado com o hook  */}
-                        {/* onChange={(e: ChangeEvent<HTMLInputElement>)} para recuperar os dados */} 
+
+                        {/* OBS: value={UserLogin.usuario} vai estar linkado com o hook  */}
+                        {/* OBS: onChange={(e: ChangeEvent<HTMLInputElement>)} para recuperar os dados */} 
 
                         <TextField value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} id='senha' label='senha' variant='outlined' name='senha' margin='normal' type='password'fullWidth />
 
@@ -96,7 +98,10 @@ async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
                         <Box marginRight={1}>
                             <Typography variant='subtitle1' gutterBottom align='center'>Não tem uma conta?</Typography>
                         </Box>
+
+                            <Link to='/cadastrar' className='text-decorator-none'>
                             <Typography variant='subtitle1' gutterBottom align='center' className='textos1'>Cadastre-se</Typography>
+                            </Link>
                     </Box>
                 </Box>
             </Grid>

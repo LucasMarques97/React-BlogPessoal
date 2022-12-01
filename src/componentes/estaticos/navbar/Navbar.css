@@ -7,3 +7,7 @@
     text-decoration: none;
 }
 
+.barFlex{
+    display: flex;
+    justify-content: space-between;
+}
